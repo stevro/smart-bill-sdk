@@ -11,6 +11,7 @@ $client->email = 'test@test.com';
 $client->county = 'Iasi';
 $client->country = 'RO';
 $client->vatCode = '22222';
+$client->saveToDb = false;
 
 $product = new \Stev\SmartBillClient\Model\Product('Test produs', 100, 1, 'buc');
 $product->isTaxIncluded = false;
