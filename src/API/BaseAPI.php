@@ -7,7 +7,7 @@ use Stev\SmartBillClient\Exception\PermissionDeniedException;
 use Stev\SmartBillClient\Response\ErrorResponse;
 use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
-use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
@@ -17,7 +17,7 @@ class BaseAPI
     protected string $baseUrl = 'https://ws.smartbill.ro/SBORO/api';
 
     public function __construct(
-        protected readonly Serializer $serializer,
+        protected readonly SerializerInterface $serializer,
         protected readonly HttpClientInterface $httpClient,
         #[\SensitiveParameter] private string $username,
         #[\SensitiveParameter] private string $password,
