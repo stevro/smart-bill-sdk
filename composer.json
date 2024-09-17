@@ -2,7 +2,7 @@
   "name": "stev/smart-bill-client",
   "description": "PHP Client SDK for SmartBill.ro API",
   "type": "library",
-  "license": "GNU",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "Stev\\SmartBillClient\\": "src/"
