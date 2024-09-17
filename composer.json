@@ -1,5 +1,5 @@
 {
-  "name": "stev/smart-bill-client",
+  "name": "stev/smart-bill-php-sdk",
   "description": "PHP Client SDK for SmartBill.ro API",
   "type": "library",
   "license": "MIT",
