@@ -6,7 +6,7 @@ namespace Stev\SmartBillClient;
 use Stev\SmartBillClient\API\InvoiceAPI;
 use Stev\SmartBillClient\API\PaymentAPI;
 use Stev\SmartBillClient\API\QuoteAPI;
-use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class SmartBillAPI
@@ -17,7 +17,7 @@ class SmartBillAPI
     private ?PaymentAPI $paymentAPI = null;
 
     public function __construct(
-        protected readonly Serializer $serializer,
+        protected readonly SerializerInterface $serializer,
         protected readonly HttpClientInterface $httpClient,
         #[\SensitiveParameter] private string $username,
         #[\SensitiveParameter] private string $password,
