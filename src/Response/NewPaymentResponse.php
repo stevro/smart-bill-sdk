@@ -2,8 +2,7 @@
 
 namespace Stev\SmartBillClient\Response;
 
-class NewInvoiceResponse extends BaseResponse
+class NewPaymentResponse extends BaseResponse
 {
-
 
 }

@@ -2,9 +2,6 @@
 
 namespace Stev\SmartBillClient\Model;
 
-use Symfony\Component\Serializer\Annotation as Serializer;
-use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
-
 class Invoice
 {
 
@@ -41,6 +38,7 @@ class Invoice
     public ?bool $sendEmail = null;
     public ?Email $email = null;
     public array $products = [];
+    public ?InvoicePayment $payment = null;
 
     public function __construct(public string $companyVatCode)
     {

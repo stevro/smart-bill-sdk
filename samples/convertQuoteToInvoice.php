@@ -7,25 +7,15 @@ $setup = require 'bootstrap.php';
 /** @var \Stev\SmartBillClient\SmartBillAPI $smartBillClient */
 $smartBillClient = $setup['smartBillClient'];
 
-
-$client = new \Stev\SmartBillClient\Model\Client('SC TEST SRL');
-$client->email = 'test@test.com';
-$client->county = 'Iasi';
-$client->country = 'RO';
-$client->vatCode = '22222';
-
-$product = new \Stev\SmartBillClient\Model\Product('Test produs', 100, 1, 'buc');
-$product->isTaxIncluded = false;
-$product->taxPercentage = 19;
-$product->isService = true;
-$product->saveToDb = false;
-
 $invoice = new Invoice($_SERVER['SMART_BILL_VAT_NUMBER']);
 $invoice->seriesName = 'TEST';
 $invoice->issueDate = new \DateTime();
-$invoice->dueDate = (new \DateTime())->modify('+30 days');
-$invoice->client = $client;
-$invoice->addProduct($product);
+
+$invoice->useEstimateDetails = true;
+$invoice->estimate = new \Stev\SmartBillClient\Model\Estimate('PROFORMA_TEST', '0081');
+
+$invoice->payment = new \Stev\SmartBillClient\Model\InvoicePayment(119, 'Ordin plata');
+$invoice->payment->isCash = false;
 
 try {
     $response = $smartBillClient->getInvoiceAPI()->sendInvoice($invoice);
