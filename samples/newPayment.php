@@ -15,7 +15,7 @@ $payment->invoicesList = [
 ];
 
 try {
-    $response = $smartBillClient->getPaymentAPI()->sendPayment($payment);
+    $response = $smartBillClient->getPaymentAPI()->createPayment($payment);
     dump($response);
 } catch (\Stev\SmartBillClient\Exception\APIException $e) {
     dump($e->getMessage());

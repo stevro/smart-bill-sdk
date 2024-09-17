@@ -18,7 +18,7 @@ $invoice->payment = new \Stev\SmartBillClient\Model\InvoicePayment(119, 'Ordin p
 $invoice->payment->isCash = false;
 
 try {
-    $response = $smartBillClient->getInvoiceAPI()->sendInvoice($invoice);
+    $response = $smartBillClient->getInvoiceAPI()->createInvoice($invoice);
     dump($response);
 } catch (\Stev\SmartBillClient\Exception\APIException $e) {
     dump($e->getMessage());

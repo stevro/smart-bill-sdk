@@ -10,7 +10,7 @@ use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 
 class QuoteAPI extends BaseAPI
 {
-    public function sendQuote(Quote $quote, array $serializerContext = []): NewQuoteResponse
+    public function createQuote(Quote $quote, array $serializerContext = []): NewQuoteResponse
     {
         $httpClient = $this->initClient();
 

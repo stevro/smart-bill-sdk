@@ -9,7 +9,7 @@ use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 
 class PaymentAPI extends BaseAPI
 {
-    public function sendPayment(Payment $payment, array $serializerContext = []): NewPaymentResponse
+    public function createPayment(Payment $payment, array $serializerContext = []): NewPaymentResponse
     {
         $httpClient = $this->initClient();
 

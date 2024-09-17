@@ -11,7 +11,7 @@ use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 class InvoiceAPI extends BaseAPI
 {
    
-    public function sendInvoice(Invoice $invoice, array $serializerContext = []): NewInvoiceResponse
+    public function createInvoice(Invoice $invoice, array $serializerContext = []): NewInvoiceResponse
     {
         $httpClient = $this->initClient();
 

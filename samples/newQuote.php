@@ -26,7 +26,7 @@ $quote->client = $client;
 $quote->addProduct($product);
 
 try {
-    $response = $smartBillClient->getQuoteAPI()->sendQuote($quote);
+    $response = $smartBillClient->getQuoteAPI()->createQuote($quote);
     dump($response);
 } catch (\Stev\SmartBillClient\Exception\APIException $e) {
     dump($e->getMessage());
