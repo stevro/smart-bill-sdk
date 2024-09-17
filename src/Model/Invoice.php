@@ -10,11 +10,9 @@ class Invoice
 
     public ?Client $client = null;
 
-    #[Serializer\Context([DateTimeNormalizer::FORMAT_KEY => 'Y-m-d'])]
+
     public ?\DateTime $issueDate = null;
-    #[Serializer\Context([DateTimeNormalizer::FORMAT_KEY => 'Y-m-d'])]
     public ?\DateTime $dueDate = null;
-    #[Serializer\Context([DateTimeNormalizer::FORMAT_KEY => 'Y-m-d'])]
     public ?\DateTime $deliveryDate = null;
     public ?string $seriesName = null;
     public string $currency = 'RON';
@@ -39,7 +37,6 @@ class Invoice
     public ?string $delegateName = null;
     public ?string $delegateIdentityCard = null;
     public ?string $delegateAuto = null;
-    #[Serializer\Context([DateTimeNormalizer::FORMAT_KEY => 'Y-m-d'])]
     public ?\DateTime $paymentDate = null;
     public ?bool $sendEmail = null;
     public ?Email $email = null;

@@ -20,9 +20,9 @@ class Product
 
     public function __construct(
         public string $name,
-        public string $measuringUnitName,
+        public float $price,
         public float $quantity,
-        public float $price
+        public string $measuringUnitName
     ) {
     }
 
