@@ -1,0 +1,23 @@
+{
+    "name": "stev/smart-bill-client",
+    "description": "PHP Client SDK for SmartBill.ro API",
+    "type": "library",
+    "license": "GNU",
+    "autoload": {
+        "psr-4": {
+            "Stev\\SmartBillClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stefan Matei",
+            "email": "stev.matei@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">8.1",
+        "symfony/serializer": "^7.1",
+        "symfony/http-client": "^7.1"
+    }
+}
