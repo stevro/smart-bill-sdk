@@ -11,7 +11,7 @@ $payment = new \Stev\SmartBillClient\Model\Payment($_SERVER['SMART_BILL_VAT_NUMB
 $payment->issueDate = new \DateTime();
 $payment->useInvoiceDetails = true;
 $payment->invoicesList = [
-    ['seriesName' => 'TEST', 'number' => '0034'],
+    ['seriesName' => 'TEST', 'number' => '0039'],
 ];
 
 try {
